@@ -1,5 +1,11 @@
 body {
     font-family: 'Karla', sans-serif; /* Aplicar la fuente Karla */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header{
@@ -42,6 +48,47 @@ nav a:hover{
     text-decoration: underline;
 }
 
+main {
+    flex-grow: 1;
+}
+
+.hero {
+    background-image: url('img/hero-background.jpg'); /* Asegúrate de tener una imagen de fondo */
+    background-size: cover;
+    background-position: center;
+    color: #000;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
 .servicios{
     width: 940px;
     margin: 0 auto;
@@ -101,11 +148,6 @@ footer {
     clear: left;
 }
 
-main {
-    flex: 1;
-    padding: 20px;
-}
-
 
 .Redes ul {
     list-style-type: none;
@@ -162,13 +204,14 @@ form label, form legend{
 
 .titulo-principal{
     text-align: center;
-    font-size: 2em;
-    margin: 0 0 1em;
+    font-size: 36px;
+    margin-bottom: 20px;
     clear: left;
+    font-weight: bold;
 }
 
 .historia .doctora{
-    width: 120px;
+    width: 192px;
     float: left;
     margin: 0 20px 20px 0;
 }
@@ -196,7 +239,7 @@ form label, form legend{
 .contenido-servicios{
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content:space-around;
     flex-wrap: wrap;
 }
 
@@ -206,7 +249,7 @@ form label, form legend{
     padding: 0;
     margin: 0;
     flex: 1;
-    max-width: 2000px;
+    max-width: 1800px;
     display: grid;
 }
 
@@ -234,7 +277,7 @@ form label, form legend{
 .ver-mas {
     display:inline-block;
     margin-top: 20px;
-    margin-left: 10em;
+    margin-left: 300px;
     padding: 10px 50px;
     background-color: #007bff;
     color: #fff;
@@ -258,9 +301,10 @@ form label, form legend{
 
 
 .imagen-servicios{
-    max-width: 40%;
-    height: auto;
-    margin-left: 20px;
+    max-width: 100%;
+    height: 250px;
+    margin-top: 60px;
+    margin-right: 20px;
     object-fit: cover;
     transition: 400ms;
     box-shadow: 10px 10px 30px 15px #000000;
@@ -285,13 +329,29 @@ form label, form legend{
     margin: 0 auto;
 }
 /* Aqui inicia el CSS de Servicio*/
+.titulo-servicios{
+    font-size: 3em;
+    font-weight: bold;
+    margin: 20px 0;
+    text-align: center;
+}
+.parrafo-principal{
+    font-size: 20px;
+    text-align:center;
+    margin: 20px 0;
+}
+.contenedor-servicios{
+    padding: 3em ;
+    background: #7289da;
+}
+
 ul.servicios {
     list-style-type: none;
     padding: 0;
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 ul.servicios li {
@@ -299,7 +359,7 @@ ul.servicios li {
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
-    margin: 10px;
+    margin: 20px;
     width: calc(50% - 40px); /* 50% menos el margen y padding */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -316,29 +376,42 @@ ul.servicios li img {
 }
 
 ul.servicios li h2 {
-    font-size: 20px;
+    font-size: 32px;
     margin: 10px 0;
 }
 
 ul.servicios li p {
-    font-size: 16px;
+    font-size: 20px;
     color: #333;
+    margin: 10px 0;
 }
 
 /* Aqui inicia el CSS de Contacto*/
 .contacto {
     padding: 50px;
-    background-color: #f4f4f4;
+    background: linear-gradient(#FEFEFE, #7289da);
     text-align: center;
 }
 
 .contacto h2 {
-    font-size: 28px;
+    font-size: 40px;
     margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.informacion{
+    background: #7289da;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 0;
+    padding: 3em 0;
 }
 
 .contacto p {
-    font-size: 16px;
+    font-size: 48px;
+    margin-bottom: 40px;
     color: #333;
 }
 
@@ -368,4 +441,37 @@ ul.servicios li p {
     .lista-servicios, .imagen-servicios{
         width: 100%;
     }
+
+    nav {
+        position: static;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    nav li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero p , .informacion {
+        font-size: 24px;
+    }
+
+    .servicios li {
+        width: calc(100% - 40px);
+    }
+
+
+    .ver-mas {
+        margin-left: 2em;
+        width: auto;
+    }
+    .informacion{
+        padding: 4em;
+    }
+    
 }
